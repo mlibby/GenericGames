@@ -1,0 +1,104 @@
+﻿<nav>
+    <div class="title-bar">
+        <a class="logo" href="/" title="Home">
+            <svg class="icon icon-pig"><use xlink:href="#icon-pig"></use></svg>
+            <span class="link-text">MikeysGames</span>
+        </a>
+
+        <button title="toggle site navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
+        </button>
+    </div>
+
+    <div class="@NavMenuCssClass menu-wrapper" aria-label="Site" @onclick="ToggleNavMenu">
+        <ul>
+            <li>
+                <div class="h2">Import</div>
+                <ul>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.ImportGnuCash">
+                            <span class="link-text">
+                                <span class="sr-only">Import </span>
+                                GnuCash Data
+                            </span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.ImportOfx">
+                            <span class="link-text">
+                                <span class="sr-only">Import </span>
+                                OFX/QFX File
+                            </span>
+                        </NavLink>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="h2">Reports</div>
+                <ul>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.ReportBalances">
+                            <span class="link-text">
+                                Balances
+                                <span class="sr-only"> Report</span>
+                            </span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.ReportBudget">
+                            <span class="link-text">
+                                Budget
+                                <span class="sr-only"> Report</span>
+                            </span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.ReportIncomeExpense">
+                            <span class="link-text">
+                                Income &amp; Expense
+                                <span class="sr-only"> Report</span>
+                            </span>
+                        </NavLink>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="h2">Manage</div>
+                <ul>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.AccountIndex">
+                            <span class="link-text">
+                                <span class="sr-only">Manage </span>
+                                Accounts
+                            </span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.CommodityIndex">
+                            <span class="link-text">
+                                <span class="sr-only">Manage </span>
+                                Commodities
+                            </span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.TransactionIndex">
+                            <span class="link-text">
+                                <span class="sr-only">Manage </span>
+                                Transactions
+                            </span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="@PageRoute.BudgetIndex" Match="NavLinkMatch.Prefix">
+                            <span class="link-text">
+                                <span class="sr-only">Manage </span>
+                                Budgets
+                            </span>
+                        </NavLink>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

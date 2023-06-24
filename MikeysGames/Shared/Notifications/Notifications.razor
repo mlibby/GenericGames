@@ -1,0 +1,15 @@
+﻿@*
+    Inspired by https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenNotification.razor
+*@
+
+@implements IDisposable
+
+@if (NotificationService.Messages.Count > 0)
+{
+    <div>
+        @foreach (var message in NotificationService.Messages)
+        {
+            <Notifications_Message Message=@message />
+        }
+    </div>
+}

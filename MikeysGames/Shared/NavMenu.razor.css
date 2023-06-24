@@ -1,0 +1,113 @@
+﻿nav {
+    background: var(--background-accent);
+    font-size: 1.25rem;
+    height: 100%;
+    margin: 0;
+    padding: 0.5rem 1rem 0 0.5rem;
+}
+
+    nav ::deep .h2 {
+        padding: 0.5rem 0 0.5rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    nav ::deep ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav .icon {
+        text-decoration: none;
+    }
+
+.navbar-toggler {
+    background: var(--background-accent);
+    border: 0;
+    color: var(--green);
+    margin-left: auto;
+}
+
+.logo {
+    border-radius: 4px;
+    color: var(--green);
+    font-size: 1.75rem;
+    padding-top: 0.1rem;
+    text-decoration: none;
+}
+
+    .logo .icon {
+        color: var(--green);
+        fill: var(--green);
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .logo .link-text {
+        margin-left: -0.5rem;
+    }
+
+.menu-wrapper {
+    margin-left: 0.5rem;
+}
+
+.title {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 1.25rem;
+}
+
+.title-bar {
+    background: var(--background-accent);
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    font-size: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+    .nav-item ::deep a {
+        align-items: center;
+        border-radius: 4px;
+        color: var(--color);
+        display: flex;
+        height: 2rem;
+        line-height: 2rem;
+    }
+
+        .nav-item ::deep a.active {
+            background-color: var(--background-active);
+            color: var(--color-highlight);
+        }
+
+        .nav-item ::deep a:hover,
+        a.logo:hover {
+            background-color: var(--background-hover);
+            color: var(--color-highlight);
+        }
+
+::deep .nav-link {
+    padding: 0 0.5rem;
+    text-decoration: none;
+}
+
+@media (min-width: 760px) {
+    .collapse {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .nav-scrollable {
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}

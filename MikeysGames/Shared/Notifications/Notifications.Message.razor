@@ -1,0 +1,16 @@
+﻿@*
+    Inspired by https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenNotificationMessage.razor
+*@
+
+@if (Message is not null)
+{
+    <div aria-live="polite" class="message @(MessageClass())">
+        @(new MarkupString($"<svg class='icon logo #{IconClass()}'><use xlink:href='#{IconClass()}'/></svg>"))
+        <span class="sr-only">@(Message.Severity)</span>
+        <span class="text">@Message.Message</span>
+        <button class="close-button" @onclick="Close">
+            <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+            <span class="sr-only">Close</span>
+        </button>
+    </div>
+}

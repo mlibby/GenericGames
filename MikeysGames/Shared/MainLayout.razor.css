@@ -1,0 +1,30 @@
+﻿main {
+    padding: 0.5rem 1rem;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+@media (min-width: 760px) {
+    .page {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        width: 13rem;
+        min-width: 13rem;
+        max-width: 13rem;
+    }
+}
+
+@media print {
+    .sidebar {
+        display: none;
+    }
+}
