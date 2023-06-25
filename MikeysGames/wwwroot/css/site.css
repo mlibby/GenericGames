@@ -1,4 +1,11 @@
-﻿:root {
+﻿@font-face {
+    font-family: "Voces";
+    src: url("fonts/Voces-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
 	--background-accent: #d0d0d0;
 	--background-active: rgba(255,255,255,0.3);
 	--background-color: #e8e8e8;
@@ -53,7 +60,7 @@ a, a:visited {
 }
 
 body, input, button, select, optgroup, textarea {
-	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	font-family: "Voces"
 }
 
 body {
@@ -350,6 +357,26 @@ th {
 	border: 2px solid var(--warning-accent);
 	bottom: 0;
 	color: var(--warning-color);
+	display: none;
+	left: 0;
+	padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
+	#blazor-error-ui .dismiss {
+		cursor: pointer;
+		position: absolute;
+		right: 0.75rem;
+		top: 0.5rem;
+	}
+
+
+#blazor-error-ui {
+	background: lightyellow;
+	bottom: 0;
+	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
 	display: none;
 	left: 0;
 	padding: 0.6rem 1.25rem 0.7rem 1.25rem;

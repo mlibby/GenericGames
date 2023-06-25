@@ -1,3 +1,1 @@
 ﻿namespace MikeysGames.Enums;
-
-
