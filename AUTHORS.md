@@ -1,4 +1,4 @@
-# Mikey's Games Authors
+# Generic Games Authors
 
 ## Project Owner 
 
