@@ -18,12 +18,12 @@ Then the players use the web browser on their devices (or even laptops) to conne
 
 Games "to do" list:
 
-* a dice poker game (like Yahtzee)
-* a word find (like Boggle)
+* a generic dice poker game (like Yahtzee)
+* a generic word find (like Boggle)
 
 # Full Documentation
 
-Documentation lives at [Generic Games](https://genericgames.com)
+Documentation lives at [Generic Games](https://genericgames.online)
 
 # License
 
