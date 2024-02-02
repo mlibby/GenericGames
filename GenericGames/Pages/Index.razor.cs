@@ -6,7 +6,7 @@ public partial class Index
 {
     public string ServerUrl = "localhost";
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         var baseUri = new Uri(this.NavigationManager.BaseUri);
         var target = $"{baseUri.Scheme}://{ConnectionHelper.GetIpAddress()}:{baseUri.Port}/join";
