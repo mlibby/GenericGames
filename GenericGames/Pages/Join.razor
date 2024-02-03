@@ -1,0 +1,21 @@
+﻿@attribute [Route(PageRoute.Join)]
+
+<h1>Join the fun!</h1>
+
+@if(string.IsNullOrWhiteSpace(model.PlayerName))
+{
+    <h2>Register as a player</h2>
+
+    <EditForm EditContext="editContext">
+        <DataAnnotationsValidator />
+        <ValidationSummary role="alert" aria-label="player registration errors" />
+        <div class="field">
+            <label for="player-name">Player Name</label>
+            <InputText id="player-name" @bind-Value="model.PlayerName"></InputText>
+        </div>
+    </EditForm>
+}
+else
+{
+    <h2>Welcome, @model.PlayerName</h2>
+}
